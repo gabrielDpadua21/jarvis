@@ -6,9 +6,11 @@ def main():
 
     translation = TranslationStrategy()
     commit = CommitStrategy()
-    context = OpenIaContext(commit)
+    context = OpenIaContext(translation)
 
-    response = context.execute_strategy("inicio do projeto javis, e criação das estrategias de tradução e commit")
+    test = input("Texto a ser traduzido: ")
+
+    response = context.execute_strategy(test)
 
     print(f"""
         Pergunta:
