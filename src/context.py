@@ -8,5 +8,5 @@ class OpenIaContext:
     def set_strategy(self, strategy: Strategy):
         self._strategy = strategy
 
-    def execute_strategy(self, data: str):
+    def execute_strategy(self, data: str) -> str:
         return self._strategy.execute(data)
